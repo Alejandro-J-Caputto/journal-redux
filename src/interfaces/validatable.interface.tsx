@@ -1,5 +1,5 @@
 export interface Validatable {
-  value: string | number | Date;
+  // value: string | number | Date;
   valueCompare?: string | number
   type?: string
   required?: boolean;

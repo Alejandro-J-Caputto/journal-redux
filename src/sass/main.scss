@@ -2,4 +2,7 @@
 @import './abstracts/mixins';
 @import './abstracts/variables';
 @import './typography/typography';
+@import './smallComponents/buttons';
 @import './base/base';
+@import '../pages/authorizationP';
+@import '../components/forms/authForms';

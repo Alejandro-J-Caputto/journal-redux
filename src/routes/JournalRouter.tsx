@@ -10,7 +10,7 @@ export const JournalRouter = () => {
         <Route path="/" exact>
           <Redirect to='/auth/login'/>
         </Route>
-        <Route path="/auth/login" exact>
+        <Route path="/auth" >
           <Authorization/>
         </Route>
         <Route path="/journal-redux" exact>

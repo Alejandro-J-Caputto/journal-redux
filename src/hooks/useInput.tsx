@@ -24,6 +24,12 @@ const useInput = (valOpts: Validatable) => {
     setIsDirty(false)
   };
 
+  const focusError = () => {
+    console.log('hello')
+    setIsDirty(false)
+  }
+  
+
   
 
   return {
@@ -32,7 +38,8 @@ const useInput = (valOpts: Validatable) => {
     containsError,
     inputChangeHandler,
     inputBlurHandler,
-    reset
+    reset,
+    focusError
   }
 }
 

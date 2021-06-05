@@ -68,6 +68,7 @@
     color: $color-white;
     height: 20rem;
     width: 20rem;
+    animation: reactLogo 12s linear infinite;
     @include responsive(phone) {
       font-size: 15rem;
       height: 15rem;
@@ -219,4 +220,17 @@
 }
 .authLink {
   text-align: center;
+}
+
+@keyframes reactLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.error-text {
+  color: #b40e0e;
 }

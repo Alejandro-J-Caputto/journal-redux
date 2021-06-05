@@ -125,7 +125,8 @@ body {
     font-size: 20rem;
     color: #fff;
     height: 20rem;
-    width: 20rem; }
+    width: 20rem;
+    animation: reactLogo 12s linear infinite; }
     @media (max-width: 37.5em) {
       .auth-card__icon {
         font-size: 15rem;
@@ -240,3 +241,12 @@ body {
 
 .authLink {
   text-align: center; }
+
+@keyframes reactLogo {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.error-text {
+  color: #b40e0e; }

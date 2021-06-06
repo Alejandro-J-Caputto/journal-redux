@@ -1,0 +1,13 @@
+.section-journal {
+  display: flex;
+  background-color: blue;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.section-entries {
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+

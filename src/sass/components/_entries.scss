@@ -1,0 +1,30 @@
+
+.entry {
+
+  &-item {
+    cursor: pointer;
+    display: flex;
+    border-radius: 4px;
+    color: $color-black;
+    padding: 2rem;
+    background-color: $color-white;
+    margin: 2rem;
+    text-align: left;
+    transition: all .5s;
+    &:hover {
+      transform: scale(1.1);
+      background-color: darken($color: $color-pink, $amount: 20);
+    }
+  }
+  &-img {
+    height: 50px;
+    width: 50px;
+
+  }
+  &-info {
+    margin-left: 1rem;
+  }
+  &-date {
+    text-align: center;
+  }
+}

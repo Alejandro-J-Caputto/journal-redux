@@ -1,0 +1,36 @@
+.note-container {
+  display: flex;
+  height: 100%;
+  background-color: $color-white;
+  justify-content: center;
+  overflow: scroll;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  & > * {
+    padding: 2rem;
+    margin: 2rem;
+  }
+  & input {
+    font-family: inherit;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    &:focus {
+      background-color: khaki;
+    }
+  }
+  & textarea {
+    font-family: inherit;
+    font-size: inherit;
+    flex: 1 1 auto;
+    resize: none;
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+}

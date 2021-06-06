@@ -4,5 +4,10 @@
 @import './typography/typography';
 @import './smallComponents/buttons';
 @import './base/base';
-@import '../pages/authorizationP';
-@import '../components/forms/authForms';
+@import './components/pagesStyles/authorizationP';
+@import './components/authForms';
+@import './components/layoutStyles/sidebar';
+@import './components/pagesStyles/mainJournal';
+@import './components/entries';
+@import './components/entriesContainer';
+@import './components/layoutStyles/navbar'

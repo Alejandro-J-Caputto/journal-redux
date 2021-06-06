@@ -1,0 +1,28 @@
+.sidebar {
+  flex: 0 0 25%;
+  // min-width: 20%;
+  flex-shrink: 0;
+  background-color: $color-grey-dark-1;
+  color: white;
+  text-align: center;
+  // overflow-y: scroll;
+}
+
+.new-entry {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  & i {
+    transition: all 1s;
+    cursor: pointer;
+    font-size: 5rem;
+  }
+  & i:hover {
+    transform: scale(1.4);
+    color: lighten($color: $color-green-regular, $amount: 20)
+  }
+}
+.sidebar-list {
+  max-height: 60rem;
+  // flex: 0 0 50%;
+  overflow-y: scroll;
+}

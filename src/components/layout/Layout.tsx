@@ -1,10 +1,9 @@
-import React, { ReactChild, ReactChildren } from 'react'
-import { Navbar } from './Navbar'
+import React, { ReactChild} from 'react'
 
-export const Layout = ({children}:{children: ReactChildren | ReactChild}) => {
+
+export const Layout = ({children}:{children: ReactChild}) => {
   return (
     <>
-      <Navbar/>
       <main>{children}</main>
     </>
   )

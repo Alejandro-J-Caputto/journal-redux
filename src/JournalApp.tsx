@@ -1,8 +1,12 @@
+import { Provider } from 'react-redux';
+import { store } from './redux/store/store';
 import { JournalRouter } from './routes/JournalRouter';
 
 const JournalApp = () => {
   return (
-    <JournalRouter/>
+    <Provider store={store}>
+      <JournalRouter/>
+    </Provider>
   )
 }
 

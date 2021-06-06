@@ -1,9 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import useInput from '../../hooks/useInput';
 import { Validatable } from '../../interfaces/validatable.interface';
+import { registerAsync } from '../../redux/actions/authActions';
 
 export const RegisterForm = () => {
+  // const authState = useSelector()
+  const registerDispatch = useDispatch();
+
   const passwordOpts: Validatable = {
     required: true,
     minLength: 4,
@@ -76,12 +81,19 @@ export const RegisterForm = () => {
     if (!formIsValid) {
       return;
     }
+    const formData = {
+      email,
+      password,
+      passwordConfirm,
+      name
+    }
     console.log('form correct')
-    console.log(email, password);
+    console.log(formData);
+    registerDispatch(registerAsync(formData))
     resetPassword();
     resetEmail();
     resetPasswordConfirm();
-    resetName()
+    resetName();
   }
 
   const emailInputClasses = emailContainsError && 'auth__error--input';
@@ -109,7 +121,7 @@ export const RegisterForm = () => {
             htmlFor="name"
             className="auth-card__form__label"
           >Name</label>
-          {/* <p className="auth__error" >The name is required</p> */}
+          {nameContainsError && <p className="error-text" >The name is required</p>}
         </div>
         <div className="auth-card__form__group">
           <input
@@ -123,7 +135,7 @@ export const RegisterForm = () => {
             placeholder="Email Address"
             id="email" />
           <label htmlFor="email" className="auth-card__form__label">Email Address</label>
-          {/* <p className="auth__error" >The email adress is required</p> */}
+          { emailContainsError && <p className="error-text" >The email adress is required</p>}
 
         </div>
         <div className="auth-card__form__group">
@@ -137,7 +149,7 @@ export const RegisterForm = () => {
             value={password}
             id="password" />
           <label htmlFor="password" className="auth-card__form__label">Password</label>
-          {/* <p className="auth__error"  >The password is required</p> */}
+          {passwordContainsError && <p className="error-text"  >The password is required</p>}
 
         </div>
         <div className="auth-card__form__group">
@@ -152,8 +164,8 @@ export const RegisterForm = () => {
             name="passwordConfirm"
             id="passwordConfirm" />
           <label htmlFor="passwordConfirm" className="auth-card__form__label">Confirm Password</label>
-          {/* <p className="auth__error"  >The password confirmation is required</p> */}
-          {/* <p className="auth__error">ERROR API</p> */}
+          {passwordConfirmContainsError && <p className="error-text"  >The password confirmation is required</p>}
+          {/* <p className="error-text">ERROR API</p> */}
         </div>
         <div className="auth-card__form__group">
           <button className="btn btn--red" disabled={!formIsValid} type="submit"> Sign In </button>

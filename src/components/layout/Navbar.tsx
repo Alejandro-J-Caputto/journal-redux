@@ -1,7 +1,10 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom'
+import { startLogout } from '../../redux/actions/authActions';
 
 export const Navbar = () => {
+  const dispatch = useDispatch();
   return (
     <nav className="navbar">
       <div className="navbar__logo-box">
@@ -25,9 +28,9 @@ export const Navbar = () => {
           <img className="navbar__list-item-user-photo" src={user.img ? user.img : ProfilePic} alt="profile"/>
         </NavLink> */}
 
-        {/* <NavLink onClick={onLogout} className="navbar__list-item" activeClassName="active-link-nav"  to="/auth/login">
+        <NavLink onClick={() => {dispatch(startLogout())}} className="navbar__list-item" activeClassName="active-link-nav"  to="/auth/login">
           <i className="navbar__list-item-icon--logout fas fa-sign-out-alt"></i>
-        </NavLink> */}
+        </NavLink>
 
       </div>
 

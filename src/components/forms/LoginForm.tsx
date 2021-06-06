@@ -1,11 +1,18 @@
 import React from 'react'
+
+import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import useInput from '../../hooks/useInput'
 import { Validatable } from '../../interfaces/validatable.interface'
+import {loginAsync } from '../../redux/actions/authActions';
+
 
 
 
 export const LoginForm = () => {
+
+ 
+  const loginDispatch = useDispatch();
   const passwordOpts: Validatable = {
     required: true,
     minLength: 4,
@@ -49,6 +56,7 @@ export const LoginForm = () => {
     }
     console.log('form correct')
     console.log(email, password);
+    loginDispatch(loginAsync(email, password));
     resetPassword();
     resetEmail();
   }

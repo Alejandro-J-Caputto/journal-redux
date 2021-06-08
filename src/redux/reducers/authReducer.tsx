@@ -11,13 +11,13 @@ const authReducer = (state: typeof initialState = initialState, action:CommonAct
   switch (action.type) {
     case types.login:
         return {
-          uid: action.payload!.uid,
-          name: action.payload!.name
+          uid: action.payload.uid,
+          name: action.payload.name
         }
     case types.register: 
         return {
-          uid: action.payload?.uid,
-          name: action.payload?.name
+          uid: action.payload.uid,
+          name: action.payload.name
         }
     case types.logout:
       console.log('hello aqui')

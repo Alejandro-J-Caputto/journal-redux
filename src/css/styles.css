@@ -39,6 +39,9 @@
     outline: none;
     transform: translateY(0px); }
 
+.btn-delete {
+  background-color: #cb2b39; }
+
 .notification {
   position: fixed;
   height: 30rem;
@@ -343,24 +346,29 @@ body {
   display: flex;
   border-radius: 4px;
   color: #1e1e1e;
-  padding: 2rem;
   background-color: #fff;
   margin: 2rem;
   text-align: left;
-  transition: all .5s; }
+  transition: all .5s;
+  height: 8rem; }
   .entry-item:hover {
     transform: scale(1.1);
     background-color: #b31924; }
 
 .entry-img {
-  height: 50px;
-  width: 50px; }
+  flex: 1 0 25%; }
 
 .entry-info {
-  margin-left: 1rem; }
+  padding: 1rem;
+  margin-left: 1rem;
+  flex: 0 0 50%;
+  align-self: baseline; }
 
 .entry-date {
-  text-align: center; }
+  align-self: baseline;
+  padding-right: 1rem;
+  text-align: center;
+  flex: 0 0 25%; }
 
 .note-container {
   display: flex;
@@ -391,6 +399,25 @@ body {
     .note textarea:focus {
       outline: none;
       border: none; }
+
+.no-note-message {
+  display: flex;
+  align-self: center;
+  flex-direction: column; }
+
+.no-note-logo {
+  align-self: center;
+  justify-self: center; }
+  .no-note-logo i {
+    padding: 2rem;
+    font-size: 6rem; }
+
+.note__image img {
+  margin-top: 20px;
+  height: 200px;
+  width: 400px;
+  box-shadow: 5px 5px #333;
+  border-radius: 5px; }
 
 .navbar {
   height: 5rem;
@@ -481,3 +508,6 @@ body {
   background-color: #0d47a1;
   outline: none;
   color: white; }
+
+.btn-save {
+  border: none; }

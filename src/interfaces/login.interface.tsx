@@ -3,7 +3,7 @@ export interface LoginFormType {
   password: string
 }
 export interface AuthInitialState {
-  uid: number,
+  uid: string,
   name: string
 }
 

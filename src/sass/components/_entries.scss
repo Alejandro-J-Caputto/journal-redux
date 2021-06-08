@@ -6,25 +6,34 @@
     display: flex;
     border-radius: 4px;
     color: $color-black;
-    padding: 2rem;
+    // padding: 2rem;
     background-color: $color-white;
     margin: 2rem;
     text-align: left;
     transition: all .5s;
+    // height: 5rem;
+    height: 8rem;
+    // overflow: hidden;
     &:hover {
       transform: scale(1.1);
       background-color: darken($color: $color-pink, $amount: 20);
     }
   }
   &-img {
-    height: 50px;
-    width: 50px;
-
+    // height: 50px;
+    // width: 50px;
+    flex: 1 0 25%;
   }
   &-info {
+    padding: 1rem;
     margin-left: 1rem;
+    flex: 0 0 50%;
+    align-self: baseline;
   }
   &-date {
+    align-self: baseline;
+    padding-right: 1rem;
     text-align: center;
+    flex: 0 0 25%;
   }
 }

@@ -34,3 +34,24 @@
     }
   }
 }
+.no-note-message {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+.no-note-logo {
+  align-self: center;
+  justify-self: center;
+  & i {
+    padding: 2rem;
+    font-size: 6rem;
+  }
+}
+
+.note__image img {
+  margin-top: 20px;
+  height: 200px;
+  width: 400px;
+  box-shadow: 5px 5px $color-grey-dark-1;
+  border-radius: 5px;
+}

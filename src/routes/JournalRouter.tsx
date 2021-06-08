@@ -7,6 +7,7 @@ import { NotFound } from '../pages/NotFound';
 import { useDispatch } from 'react-redux';
 import { login } from '../redux/actions/authActions';
 import { LoadingSpinner } from '../components/UI/LoadingSpinner';
+import { getAllNotesAsync } from '../redux/actions/notesActions';
 
 export const JournalRouter = () => {
 
@@ -14,10 +15,11 @@ export const JournalRouter = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const userDispatch = useDispatch();
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
+    firebase.auth().onAuthStateChanged(async (user) => {
       if (user?.uid) {
         userDispatch(login(user?.uid!, user?.displayName!))
         setIsLoggedIn(true)
+        userDispatch(getAllNotesAsync(user.uid))
       } else {
         setIsLoggedIn(false);
       }

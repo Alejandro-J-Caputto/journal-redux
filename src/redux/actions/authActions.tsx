@@ -4,6 +4,7 @@ import { loginDispatch, RegisterFormType } from '../../interfaces/login.interfac
 import { Dispatch } from "redux";
 import { displayNotificacionAction, setNotificationContent, hideNotificationAction } from './ui';
 import { NOTIFICATION_OPTS } from '../../utils/notificationIconHandler';
+import { logoutCleaning } from "./notesActions";
 
 export const loginAsync = (email: string, password: string) => {
 
@@ -65,6 +66,7 @@ export const startLogout = () => {
     await firebase.auth().signOut();
 
     dispatch(logout());
+    dispatch(logoutCleaning());
   }
 }
 

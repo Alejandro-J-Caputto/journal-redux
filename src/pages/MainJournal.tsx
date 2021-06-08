@@ -18,7 +18,7 @@ export const MainJournal = () => {
 
   return (
     <Layout>
-      <div className="section-journal">
+      <div className="section-journal animate__animated animate__fadeIn">
       {notificationDisplayed && <NotificationUI />}
         <Sidebar classes='sidebar' />
         <div className="section-entries">

@@ -101,7 +101,7 @@ export const RegisterForm = () => {
   const passwordInputClasses = passwordContainsError && 'auth__error--input';
   const passwordConfirmlInputClasses = passwordConfirmContainsError && 'auth__error--input';
   return (
-    <div className="auth-card">
+    <div className="auth-card animate__animated animate__fadeIn">
       <form onSubmit={submitHandler} autoComplete="off" className="auth-card__form auth-card--register">
         <h2 className="heading-secondary u-margin-bottom-small u-margin-top">
           Journal Redux App

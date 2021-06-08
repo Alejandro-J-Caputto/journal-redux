@@ -66,12 +66,12 @@ export const LoginForm = () => {
 
 
   return (
-    <div className="auth-card">
+    <div className="auth-card animate__animated animate__fadeIn">
       <form
         autoComplete='off'
         className="auth-card__form"
         onSubmit={submitHandler}>
-        <h2 className="heading-secondary u-margin-bottom-small u-margin-top">
+        <h2 className="heading-secondary u-margin-bottom-small u-margin-top ">
           Journal Redux App
         </h2>
         <div className="auth-card__form__group">

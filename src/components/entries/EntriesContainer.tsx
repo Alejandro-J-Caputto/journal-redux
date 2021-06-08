@@ -29,7 +29,7 @@ export const EntriesContainer = () => {
   }, [formValues, dispatch])
 
   return (
-    <div className="note-container">
+    <div className="note-container animate__animated animate__fadeIn">
       <div className="note">
         <input
           type="text"
